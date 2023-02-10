@@ -25,18 +25,42 @@
 
 
 <body>
+    <section class="welcome">
+        <h1>Welcome</h1>
+        <h2>Arthur Le Flem</h2>
+        <h3>Sample Web Pages</h3>
+        
+        <p class="tale"><a href="exercises/page-1.html">A Tale of Two Cities</a></p>
+        <p class="sections"><a href="exercises/page-2.html">Web page with sections</a></p>
+        
+        <p class="gallery"><a href="portfolio/project-hero/index.html">Hero Gallery</a></p>
+        <p class="columns"><a href="portfolio/project-multi-column/index.html">Multi-columns</a></p>
+    </section>
     
-    <h1>Welcome</h1>
-    <h2>Arthur Le Flem</h2>
-    
-    <h3>Sample Web Pages</h3>
-    
-    <p><a href="exercises/page-1.html">A Tale of Two Cities</a></p>
-    <p><a href="exercises/page-2.html">Web page with sections</a></p>
-    
-    <p><a href="portfolio/project-hero/index.html">Hero Gallery</a></p>
-    <p><a href="portfolio/project-multi-column/index.html">Multi-columns</a></p>
-    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <script type="text/javascript">
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".welcome",
+                start: "-15% 0%",
+                end: "1000% 0%",
+                markers: false,
+                scrub: true,
+                pin: true
+            }
+        })
+        .from(".tale", {opacity : 0})
+        // .to(".tale", {opacity : 0})
+        .from(".sections", {opacity : 0})
+        // .to(".sections", {opacity : 0})
+        .from(".gallery", {opacity : 0})
+        // .to(".gallery", {opacity : 0})
+        .from(".columns", {opacity : 0})
+        // .to(".columns", {opacity : 0})
+    </script>
 
 </body>
 </html>
