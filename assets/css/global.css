@@ -1,51 +1,47 @@
-/*  ============= WEB BROWSER RESETS ============ */
-* { margin: 0; padding: 0; border: none }
-*, *::before, *::after { box-sizing: border-box }
-html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
-scroll-behavior: smooth; scroll-padding-top: 20px }
-body { /* max-width: 1920px; */ line-height: 1.5; margin-left: auto; margin-right: auto; 
-min-height: 100vh; text-rendering: optimizeSpeed }  
-img { width: 100%; height: auto; display: block }
-input, button, textarea, select { font: inherit }
+.container-text {
+    display: flex;
+    flex-direction: column;
+}
+.fire {
+    transform: translateY(10%); 
+    z-index: -2;
 
-/* ================= ENDS ================ */
-
-/* Desktops */
-@media (min-width: 768px) { body { padding: 4% 20% } }
-	
-/* Mobiles */
-@media (max-width: 767px) { body { padding: 12% 8% } }
-
-body { 
-    text-align: center;
-    font-family: sans-serif;
+}
+.canadaire {
+    transform: translateY(-50%) translateX(-310%);
+    position: absolute;
+    width: 20vw;
+}
+.smoke {
+    /* retourner */
+    transform: rotate(180deg) translateY(10%) translateX(190%);
+    /* placer en arriere plan */
+    z-index: -1;
+    position: absolute;
+    width: 40vw;
+}
+.truck {
+    transform: translateY(50%) translateX(110%); 
+    position: absolute;
+    width: 20vw;
+    right: 0;
+    bottom: 1;
+}
+.fighter {
+    transform: translateY(50%) translateX(110%); 
+    position: absolute;
+    width: 15vw;
+    right: 0;
+    bottom: 1;
 }
 
-h1 {
-    font-size: 78px;
-    font-weight: normal;
-    letter-spacing: -2px;
-    margin-bottom: 12px;
-    line-height: 1.2;
-}
+nav.theme-dark.menu-sticky.menu-on-scroll,
+nav.theme-dark.menu-sticky.menu-on-scroll ul.links-wrapper.active { background-color: var(--trans-000) }
+nav.theme-dark.menu-sticky.menu-on-scroll,
+nav.theme-dark.menu-sticky.menu-on-scroll ul.links-wrapper.active { background-color: var(--trans-000) }
+nav.theme-dark,
+nav.theme-dark ul.links-wrapper.active { background-color: var(--trans-000) }
 
-h2 {
-    font-size: 42px;
-    letter-spacing: 6px;
-    margin-bottom: 48px;
-    line-height: 1.2;
-}
 
-h3 {
-    font-size: 24px;
-    margin-top: 48px;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-
-p {
-    font-size: 20px;
-    margin-bottom: 16px;
-}
+.section-selector-2 { font-family: 'Playfair Display', serif }
 

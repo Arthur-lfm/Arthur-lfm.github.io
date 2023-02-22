@@ -2,14 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arthur Le Flem | Home Page</title>
-    <meta name="description" content="Welcome to my website that showcases some of my digital creations.">
+    <meta name="description" content="Sample web page description goes here.">
 
-    <link rel="stylesheet" href="assets/css/global.css">
-    
+	<!-- Preload large image -->
+
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+
+	<!-- Google Fonts -->
+
+    <!-- Font Awesome 6 icons. Delete if not using. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Line Awesome thin icons. Delete if not using. -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVN176BS0M"></script>
     <script>
@@ -22,45 +33,135 @@
 </head>
 
 
-
-
 <body>
-    <section class="welcome">
-        <h1>Welcome</h1>
-        <h2>Arthur Le Flem</h2>
-        <h3>Sample Web Pages</h3>
-        
-        <p class="tale"><a href="exercises/page-1.html">A Tale of Two Cities</a></p>
-        <p class="sections"><a href="exercises/page-2.html">Web page with sections</a></p>
-        
-        <p class="gallery"><a href="portfolio/project-hero/index.html">Hero Gallery</a></p>
-        <p class="columns"><a href="portfolio/project-multi-column/index.html">Multi-columns</a></p>
-    </section>
-    
+    <nav class="theme-light">
+        <div class="container-menu">
+            <a href="#" class="brand">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <div class="container-menu-links">
+                <div class="nav-toggle" id="nav-toggle-btn">
+                    <div class="bar-1"></div>
+                    <div class="bar-2"></div>
+                    <div class="bar-3"></div>
+                </div>
+                <ul class="links-wrapper">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a class="btn btn-solid" id="btn-cta" href="#"><i class="fa-solid fa-user"></i> <span>Sign in</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="theme-light text-center-desktop text-center-mobile">
+        <div class="container-text">
+            <img class ="canadaire" src="assets/img/canadaire.png" alt="canadaire">
+            <img class ="smoke" src="assets/img/smoke.gif" alt="smoke">
+            <img class ="truck" src="assets/img/truck.gif" alt="truck">
+            <img class ="fighter" src="assets/img/fighter.gif" alt="fighter">
+            <img class ="fire" src="assets/img/fire.gif">
+            <h1 class ="t1">I'm Arthur Le Flem</h1>
+            <h2 class ="t2">Sample Web Pages</h2>
+        </div>              
+        <figure class="w-50">
+            <img class="arthur" src="assets/img/arthur.png">
+        </figure>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+        <script type="text/javascript">
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".container-text",
+                    start: "center center",
+                    end: "bottom top",
+                    markers: false,
+                    scrub: true,
+                    pin: true
+                }
+            })
+            .from(".fire", {opacity : 1})
+            
+            .from(".truck", {x:innerWidth * 0.5})
+            .from(".truck", {scale: 0},"<")
+            .from(".fighter", {opacity : 0})
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-    <script type="text/javascript">
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: ".welcome",
-                start: "-15% 0%",
-                end: "1000% 0%",
-                markers: false,
-                scrub: true,
-                pin: true
-            }
-        })
-        .from(".tale", {opacity : 0})
-        // .to(".tale", {opacity : 0})
-        .from(".sections", {opacity : 0})
-        // .to(".sections", {opacity : 0})
-        .from(".gallery", {opacity : 0})
-        // .to(".gallery", {opacity : 0})
-        .from(".columns", {opacity : 0})
-        // .to(".columns", {opacity : 0})
-    </script>
+            .from(".canadaire", {x:innerWidth * 1})
+            .from(".smoke", {x:innerWidth * 1},"<")
+            
+            .to(".fire", {opacity : 0},"-=0.4")
+
+            .to(".fighter", {opacity : 0})
+            .to(".truck", {x:innerWidth * 0.5})
+            .to(".truck", {scale: 0},"<")
+            .to(".t1", {x:innerWidth * -0.3})
+            .to(".t2", {x:innerWidth * 0.3},"<")
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".w-50",
+                    start: "center center",
+                    end: "bottom top",
+                    markers: false,
+                    scrub: true,
+                    pin: true
+                }
+            })
+            .from(".arthur", {opacity : 0})
+            .to(".arthur", {opacity : 0})
+        </script>
+    </header>
+        
+        
+
+    <!-- main content with sections -->
+    <main>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="theme-light section-selector-2">
+            <div class="col-1 text-center w-820px">
+                <h2>Incredible Creations</h2>
+                <h3>Click on the links to see more</h3>
+            </div>
+            <!-- Begin three-column flexbox grid -->
+            <div class="flex-cols-3 cols-padding cols-shadows cols-corners-soft">
+                <div class="col-3">
+                    <figure class="cols-fig-padding photos-zoom photos-brightness">
+                        <a href="exercises/page-1.html"><img src="assets/img/tale.png" alt="tale"></a>
+                    </figure>
+                    <h3>A Tale of Two Cities</h3>
+                    <a href="exercises/page-1.html" class="btn btn-outline btn-pill"><span>See</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="col-3">
+                    <figure class="cols-fig-padding photos-zoom photos-brightness">
+                        <a href="exercises/page-2.html"><img src="assets/img/sections.png" alt="sections"></a>
+                    </figure>
+                    <h3>Web page with sections</h3>
+                    <a href="exercises/page-2.html" class="btn btn-outline btn-pill"><span>See</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="col-3">
+                    <figure class="cols-fig-padding photos-zoom photos-brightness">
+                        <a href="portfolio/project-hero/index.html"><img src="assets/img/project-hero.png" alt="project-hero"></a>
+                    </figure>
+                    <h3>Hero Gallery</h3>
+                    <a href="portfolio/project-hero/index.html" class="btn btn-outline btn-pill"><span>See</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="flex-cols-3 cols-padding cols-shadows cols-corners-soft">
+                <div class="col-3">
+                    <figure class="cols-fig-padding photos-zoom photos-brightness">
+                        <a href="portfolio/project-multi-column/index.html"><img src="assets/img/project-multi-col.png" alt="Multi-columns"></a>
+                    </figure>
+                    <h3>Multi-columns</h3>
+                    <a href="portfolio/project-multi-column/index.html" class="btn btn-outline btn-pill"><span>See</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- End three-column flexbox grid -->
+        </section>
+    </main>
+    <script src="https://lunevedy.com/assets/js/lunevedy.js"></script>
 
 </body>
 </html>
