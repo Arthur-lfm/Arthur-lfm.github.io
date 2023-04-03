@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romain Dupre | Front-end Developer | JavaScript Image Slider Project</title>
+    <title>Augustin Glorian | Front-end Developer | JavaScript Image Slider Project</title>
     <meta name="description" content="A sample collection of my recent JavaScript projects.">
 
 	<!-- Stylesheets -->
@@ -102,7 +102,7 @@
         <a href="#"><img src="../assets/img/website-logo-sample.png" alt="website logo"></a>
         <ul class="">
             <li><a href="../../../index.html">Home</a></li>
-            <li><a href="../../../portfolio/js/index.html">Portfolio</a></li>
+            <li><a href="../../portfolio/index.html">Portfolio</a></li>
             <li><a href="../../../contact/index.html" id="btn-cta"><span>Contact</span><i class="fas fa-arrow-right"></i></a></li>
         </ul>
         <div class="item-icon">
@@ -141,44 +141,6 @@
     </main>
 
     <script>
-        (function() {
-   const pictures = [
-      "dublin-0",
-      "dublin-1",
-      "dublin-2",
-      "dublin-3",
-      "dublin-4",
-      "dublin-5"
-];
-
-// Select both left and right button. Add event listeners
-const buttons = document.querySelectorAll('.btn')
-const imageDIV = document.querySelector('.container-img')
-let counter = 0
-
-buttons.forEach(function(button){
-   button.addEventListener('click', function(e) {
-
-      if (button.classList.contains('btn-left')) {
-         counter--;
-         if (counter < 0) {
-            counter = pictures.length - 1;
-         }
-         imageDIV.style.backgroundImage = `url('assets/img/${pictures[counter]}.jpg')`
-         console.log(imageDIV.style.backgroundImage = `url('assets/img/${pictures[counter]}.jpg')`)
-      }
-
-      if (button.classList.contains('btn-right')) {
-         counter++;
-         if (counter > pictures.length - 1) {
-         counter = 0;
-      }
-      imageDIV.style.backgroundImage = `url('assets/img/${pictures[counter]}.jpg')`
-      console.log(imageDIV.style.backgroundImage = `url('assets/img/${pictures[counter]}.jpg')`)
-      }
-    }) // Ends loop for left and right arrows
-   })
-})();
 
     </script>
 
@@ -186,26 +148,66 @@ buttons.forEach(function(button){
     <!-- footer -->
 	<footer>
 
-		<h2>Romain Dupre</h2>
+		<h2>Augustin Glorian</h2>
 
 		<h3>Excellence in digital creation</h3>
 
 		<ul class="footer-links">
 			<li><a href="../../../index.html">Home</a></li>
-			<li><a href="../../../portfolio/js/index.html">Portfolio</a></li>
+			<li><a href="../../portfolio/index.html">Portfolio</a></li>
 			<li><a href="../../../contact/index.html">Contact</a></li>
 		</ul>
 
 		<ul class="footer-icons">
-			<li><a href="https://www.linkedin.com/nnnnnnnnnnn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-			<li><a href="https://github.com/nnnnnnnnnn" target="_blank"><i class="fab fa-github-square"></i></a></li>
+			<li><a href="https://www.linkedin.com/guscraftin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+			<li><a href="https://github.com/guscraftin" target="_blank"><i class="fab fa-github-square"></i></a></li>
 		</ul>
 
 		<p class="index.html"> <a href="../../../privacy.html" style="color: #fff; background-color:transparent;">Privacy &amp; Legal</a> </p>
 
     </footer>
 
-    <script src="../assets/js/menu.js"></script>
+    <script>
+        (function() {
+            const pictures = [
+                "dublin-0",
+                "dublin-1",
+                "dublin-2",
+                "dublin-3",
+                "dublin-4",
+                "dublin-5"
+            ];
+
+            // Select both left and right button. Add event listeners
+            const buttons = document.querySelectorAll('.btn')
+            const imageDIV = document.querySelector('.container-img')
+            let counter = 0
+
+            buttons.forEach(function(button){
+            button.addEventListener('click', function(e) {
+
+                if (button.classList.contains('btn-left')) {
+                    counter--;
+                    if (counter < 0) {
+                        counter = pictures.length - 1;
+                    }
+                    imageDIV.style.backgroundImage = `url('assets/img/${pictures[counter]}.jpg')`
+                    console.log(imageDIV.style.backgroundImage = `url('assets/img/${pictures[counter]}.jpg')`)
+                }
+
+                if (button.classList.contains('btn-right')) {
+                    counter++;
+                    if (counter > pictures.length - 1) {
+                    counter = 0;
+                }
+                imageDIV.style.backgroundImage = `url('assets/img/${pictures[counter]}.jpg')`
+                console.log(imageDIV.style.backgroundImage = `url('assets/img/${pictures[counter]}.jpg')`)
+                }
+                }) // Ends loop for left and right arrows
+            })
+            })();
+    </script>
+    <script src="../../assets/js/menu.js"></script>
 
 
 </body>
