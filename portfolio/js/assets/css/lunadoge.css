@@ -1394,7 +1394,7 @@ On large screens (and sometimes small screens too), the div child elements are t
 /* Mobiles */
 @media (max-width: 767px) { 
     /* 3 columns to 1 column */
-    .col-3 { 
+    .col-5 { 
         width: 100%;
         max-width: 400px; 
         margin-left: auto; margin-right: auto; 

@@ -31,9 +31,6 @@
     gtag('config', 'G-HVN176BS0M');
     </script>
 
-	<!-- Stylesheets -->
-    <link rel="stylesheet" href="portfolio/js/assets/css/lunadoge.css" />
-    <link rel="stylesheet" href="portfolio/js/assets/css/css-javascript.css" />
 
 
 	<!-- Font Awesome 6.1 icons -->
@@ -43,84 +40,54 @@
 
 
 <body>
-    <nav class="container-menu menu-desktop menu-sticky">
-        <a href=""><i class="fa-solid fa-house"></i></a>
-        <ul class="">
-            <li><a href="">Home</a></li>
-            <li><a href="portfolio/index.html">Portfolio</a></li>
-            <li><a href="contact/index.html">Contact <i class="fas fa-arrow-right"></i></a></li>
-        </ul>
-        <div class="item-icon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </nav>
 
-    <header class="theme-light text-center-desktop text-center-mobile">
-        <div class="container-text">
-            <img class ="canadaire" src="assets/img/canadaire.png" alt="canadaire">
-            <img class ="smoke" src="assets/img/smoke.gif" alt="smoke">
-            <img class ="truck" src="assets/img/truck.gif" alt="truck">
-            <img class ="fighter" src="assets/img/fighter.gif" alt="fighter">
-            <img class ="fire" src="assets/img/fire.gif">
-            <h1 class ="t1">I'm Arthur</h1>
-            <h1 class ="t2">Le Flem</h2>
-        </div>              
-        <figure class="w-50">
-            <img class="arthur" src="assets/img/arthur.png">
-        </figure>
+    <nav class="theme-light"><div class="container-menu menu-desktop">
+        <a href="" class="brand">
+            <img src="assets/img/arthur_logo.png" style="width: 100px;" alt="Sample website logo">
+        </a>
+    
+        <div class="container-menu-links">
+    
+            <div class="nav-toggle" id="nav-toggle-btn">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+    
+            <ul class="links-wrapper">
+                <li><a href="">Home</a></li>
+                <li><a href="portfolio/index.html">Portfolio</a></li>
+                <li><a class="btn btn-soft btn-solid" id="btn-cta" href="contact/index.html"><span>Contact</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div></div></nav>
+    
+           <!-- header starts here -->
+    
+        <header class="theme-light cols-2-half text-center-mobile">
+    
+            <div class="col-2 col-text">
+                <h1>Arthur Le Flem</h1>
+                <h2>I am an innovative front-end developer who loves to build human-friendly interfaces.</h2>
+    
+                <div class="container-btn">
+                    <a href="#" class="btn btn-solid btn-soft btn-shadow"><span>View my work</span><i class="fas fa-shopping-cart"></i></a><a href="#" class="btn btn-outline btn-soft btn-shadow"><span>Get in touch</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+    
+            </div>
+    
+            <div class="col-2 col-visual">
+                <figure>
+                    <img src="assets/img/arthur.jpg" alt="Placeholder image">
+                </figure>
+            </div>
+    
+        </header>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-        <script type="text/javascript">
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".container-text",
-                    start: "center center",
-                    end: "bottom top",
-                    markers: false,
-                    scrub: true,
-                    pin: true
-                }
-            })
-            .from(".fire", {opacity : 1})
-            
-            .from(".truck", {x:innerWidth * 0.5})
-            .from(".truck", {scale: 0},"<")
-            .from(".fighter", {opacity : 0})
-
-            .from(".canadaire", {x:innerWidth * 1})
-            .from(".smoke", {x:innerWidth * 1},"<")
-            
-            .to(".fire", {opacity : 0},"-=0.4")
-
-            .to(".fighter", {opacity : 0})
-            .to(".truck", {x:innerWidth * 0.5})
-            .to(".truck", {scale: 0},"<")
-            .to(".t1", {x:innerWidth * -0.3})
-            .to(".t2", {x:innerWidth * 0.3},"<")
-
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".w-50",
-                    start: "center center",
-                    end: "bottom top",
-                    markers: false,
-                    scrub: true,
-                    pin: true
-                }
-            })
-            .from(".arthur", {opacity : 0})
-            .to(".arthur", {opacity : 0})
-        </script>
-    </header>
-        
         
 
     <!-- main content with sections -->
     <main>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br>
 
         <div class="col-1 text-center">
             <h2>Recent projects</h2>
@@ -163,13 +130,6 @@
                     </figure>
                     <h3>Multi-columns</h3>
                     <a href="portfolio/project-multi-column/index.html" class="btn btn-outline btn-pill"><span>See</span><i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="col-3">
-                    <figure class="cols-fig-padding photos-zoom photos-brightness">
-                        <a href="portfolio/project-multi-column/index.html"><img src="assets/img/ca3.png" alt="CA-3"></a>
-                    </figure>
-                    <h3>CA-3</h3>
-                    <a href="portfolio/js/index.html" class="btn btn-outline btn-pill"><span>See</span><i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <!-- End three-column flexbox grid -->
