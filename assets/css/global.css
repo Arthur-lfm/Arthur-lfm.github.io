@@ -10,6 +10,9 @@ nav.theme-dark.menu-sticky.menu-on-scroll ul.links-wrapper.active { background-c
 nav.theme-dark,
 nav.theme-dark ul.links-wrapper.active { background-color: var(--trans-000) }
 
+.section-selector-1 {
+    background-image: linear-gradient(180deg,rgba(179, 120, 218, 0.411),rgb(255, 255, 255));
+}
 
 .section-selector-2 { font-family: 'Playfair Display', serif }
 
